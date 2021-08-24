@@ -7,10 +7,12 @@ int main() {
     while (t--) {
         int n; cin >> n;
         vector<int> cnt(26);
+
         for(int i = 0; i < n; i++) {
             char c; cin >> c;
             cnt[c - 'a']++;
         }
+        
         char c;
         int occ = 0;
         for(int i = 0; i < 26; i++) {
