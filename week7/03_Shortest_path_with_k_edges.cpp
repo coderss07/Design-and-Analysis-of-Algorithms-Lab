@@ -81,7 +81,7 @@ int main() {
     if(DFS(sc, k, 0)) {
         cout << "Weight of shortest path from (" << sc << ", " << ds << ") with " << k << " edges : " << ans << endl;
     }else {
-        cout << "no path of length" << k << " is available." << endl;
+        cout << "no path of length " << k << " is available." << endl;
     }
     
         
