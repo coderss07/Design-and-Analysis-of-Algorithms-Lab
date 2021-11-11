@@ -1,20 +1,23 @@
+// Author : Sarthak Sharma
+// Creation Time: 2021-11-11 21:15:34
+
 #include<bits/stdc++.h>
 
 using namespace std;
 
 bool jumpSearch(int a[], int n, int key, int &cnt) {
     int l = 0;
-    int m = sqrt(n);
-    while(a[min(m, n) - 1] < key) {
-        l = m;
-        m = 2 * m;
-        cnt++;
-        if(l >= n) {
-            return false;
-        }
-    }
+    int m = sqrt(n) - 1;
 	
-	for (int i = l; i < min(m, n); ++i) {
+    while(m < n && a[m] <= key) {
+        cnt++;
+		if(a[m] == key) {
+			return true;
+		}
+        l = m;
+        m += sqrt(n);
+    }
+	for (int i = l + 1; i < min(m, n); ++i) {
         cnt++;
 		if(a[i] == key) {
 			return true;

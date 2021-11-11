@@ -1,9 +1,11 @@
+// Author : Sarthak Sharma
+
 #include<bits/stdc++.h>
 #define pii pair<int, int>
 
 using namespace std;
 
-pii insertion(int a[],int n){
+pii insertion(int a[], int n) {
 	int com = 0;
 	int sft = 0;
 	for (int i = 1; i < n; ++i) {
@@ -11,11 +13,11 @@ pii insertion(int a[],int n){
 		int temp = a[i];
 		while(j >= 0 && a[j] > temp){
 			com++;
-			a[j+1] = a[j];
+			a[j + 1] = a[j];
 			sft++;
 			j--;
 		}
-		a[j+1] = temp;
+		a[j + 1] = temp;
 		sft++;
 	}
 	return {com, sft};
@@ -30,7 +32,7 @@ int main() {
 			cin >> a[i];
 		}
 
-		pii p = insertion(a,n);
+		pii p = insertion(a, n);
 
 		for(int i = 0; i < n; i++){
 			cout << a[i] << " ";

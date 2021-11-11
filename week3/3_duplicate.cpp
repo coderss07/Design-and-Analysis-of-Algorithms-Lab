@@ -1,3 +1,5 @@
+// Author : Sarthak Sharma
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -23,7 +25,7 @@ void quick(int a[], int l, int h) {
 	}
 }
 
-bool duplicate(int a[],int n){
+bool duplicate(int a[], int n){
 	quick(a, 0, n - 1);
 
     for(int i = 1; i < n; i++) {

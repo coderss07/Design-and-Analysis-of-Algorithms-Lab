@@ -1,3 +1,5 @@
+//Author : Sarthak Sharma
+
 #include<bits/stdc++.h>
 #define pii pair<int, int>
 
@@ -8,13 +10,13 @@ pii selection(int a[], int n){
 	int swp = 0;
 	int com = 0;
 	for (int j = 0; j < n - 1; ++j) {
-		minindex=j;
+		minindex = j;
 		for(int i = j + 1; i < n; i++){
 			com++;
 			if(a[i] < a[minindex])
 				minindex = i;
 		}
-		swp++;	
+		swp++;
 		swap(a[minindex], a[j]);
 	}
 
@@ -30,7 +32,7 @@ int main() {
 			cin >> a[i];
 		}
 
-		pii p = selection(a,n);
+		pii p = selection(a, n);
 
 		for(int i = 0; i < n; i++){
 			cout << a[i] << " ";

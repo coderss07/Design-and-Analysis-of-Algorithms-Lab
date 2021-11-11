@@ -1,3 +1,5 @@
+// Author : Sarthak Sharma
+
 #include <bits/stdc++.h>
 #define pii pair<int, int>
 #define rep(i, a, b) for (int i = a; i < b; ++i)
@@ -5,26 +7,24 @@
 using namespace std;
 
 pii two_pointers(vector<int> a, int n) {
-    int i=1,j=n-1;
+    int i = 1, j = n - 1;
 
-    while(i<j) {
+    while(i < j) {
         if(a[i] + a[j] == a[n]) {
-            return {i,j};
+            return {i, j};
         }else if(a[i] + a[j] < a[n]) {
             i++;
-        }else{
+        }else {
             j--;
         }
     }
-    return {-1,-1};
+    return {-1, -1};
 }
 
-int main()
-{
+int main() {
     int t;
     cin >> t;
-    while (t--)
-    {
+    while (t--) {
         int n;
         cin >> n;
         n++;
@@ -36,8 +36,8 @@ int main()
         int s = -1;
         int k = -1;
 
-        rep(i,3,n) {
-            pii p = two_pointers(a,i);
+        rep(i, 3, n) {
+            pii p = two_pointers(a, i);
             if(p.first != -1 && p.second != -1) {
                 f = p.first;
                 s = p.second;
@@ -46,12 +46,11 @@ int main()
             }
         }
 
-        if (k != -1)
-        {
-            cout << f << "," << s << "," << k << endl;
+        if (k != -1) {
+            cout << f << ", " << s << ", " << k << endl;
         }
         else
-            cout << "No sequence found" << endl;
+            cout << "No sequence found." << endl;
     }
     return 0;
 }
