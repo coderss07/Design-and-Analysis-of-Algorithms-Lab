@@ -1,3 +1,5 @@
+// Author : Sarthak Sharma
+
 #include<bits/stdc++.h>
 #define pii pair<int, int>
 
@@ -33,7 +35,7 @@ int main() {
         if(p.first != -1 || p.second != -1) {
             cout << p.first << " " << p.second << endl;
         }else {
-            cout << "No Duplicates Present" << endl;
+            cout << "No Such Elements Exist" << endl;
         }
     }
     return 0;

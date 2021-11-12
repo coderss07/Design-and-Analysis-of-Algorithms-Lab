@@ -74,21 +74,21 @@ int main() {
     	}else {
     		float vpw = (float)a[i][1] / a[i][0];
     		ans += (vpw * wt);
-    		selected_item.pb({i, wt});
+    		selected_item.pb({a[i][2], wt});
     		wt = 0;
     		break;
     	}
     }
 
-    cout << "Maximum value : " << fixed << setprecision(4) << ans << endl;
-    cout << "item-weight : " << endl;
+    cout << "Maximum value : " << fixed << setprecision(2) << ans << endl;
+    cout << "item-weight: " << endl;
     for(auto &it: selected_item) {
     	cout << it.ff << "-" << it.ss << endl;
     }
     
     #ifndef ONLINE_JUDGE
-          clock_t terminator_69 = clock();
-          cerr << "\nExecuted In: " << double(terminator_69 - begin_69) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
-    #endif 
+        clock_t terminator_69 = clock();
+        cerr << "\nExecuted In: " << double(terminator_69 - begin_69) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+    #endif
     return 0;
 }

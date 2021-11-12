@@ -93,7 +93,7 @@ int solve() {
 
 
     for(auto &it: Weight) {
-        cerr << it[0] << tab1 << it[1] << tab1 << it[2] << endl;
+        // cerr << it[0] << tab1 << it[1] << tab1 << it[2] << endl;
         int a = find_set(it[0]);
         int b = find_set(it[1]);
         if(a == b) {
@@ -128,6 +128,6 @@ int main() {
     #ifndef ONLINE_JUDGE
           clock_t terminator_69 = clock();
           cerr << "\nExecuted In: " << double(terminator_69 - begin_69) / CLOCKS_PER_SEC * 1000 << " ms" << endl;
-    #endif 
+    #endif
     return 0;
 }

@@ -1,3 +1,5 @@
+// Author : Sarthak Sharma
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -23,6 +25,7 @@ int main() {
             while(i--) ans.push_back(it.first);
         }
     }
+    sort(ans.begin(), ans.end());
     for(auto &it: ans) {
         cout << it << " ";
     }cout << endl;

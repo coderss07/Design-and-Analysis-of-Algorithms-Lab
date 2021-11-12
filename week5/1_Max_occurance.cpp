@@ -1,3 +1,5 @@
+// Author: Sarthak Sharma
+
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -22,7 +24,7 @@ int main() {
             }
         }
         if(occ > 1) {
-            cout << c << "-" << occ << endl;
+            cout << c << " - " << occ << endl;
         }else {
             cout << "No Duplicates Present" << endl;
         }
